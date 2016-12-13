@@ -1,5 +1,5 @@
 GrapeSwaggerRails.options.url      = '/api/v1/swagger_doc.json'
-GrapeSwaggerRails.options.app_url  = 'http://localhost:3000'
+GrapeSwaggerRails.options.app_url  = Rails.env.production? ? 'https://ancient-shelf-98201.herokuapp.com' : 'http://localhost:3000'
 
 GrapeSwaggerRails.options.api_key_name = 'user_token'
 GrapeSwaggerRails.options.api_key_type = 'query'
