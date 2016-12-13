@@ -4,10 +4,12 @@ Tiny Messenger
 ======
 
 Message Broadcasting  
-  
+
 This app uses Grape framework to build microservices-ready APIs.
 Each part of the API can be easily separated and mounted as a standalone microservice, Rack-compatible.
-Rails is being used here as an umbrella app with Grape-based APIs mounted in.
+Rails is being used here as an umbrella app with Grape-based APIs mounted in.  
+
+more info https://github.com/ruby-grape  
 
 ### Project requirements:
 
