@@ -51,17 +51,21 @@ gem 'devise_token_auth'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'awesome_print'
+  gem 'annotate'
+end
+
+group :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'rspec-its'
   gem 'rails-controller-testing'
   gem 'rspec_api_documentation'
+
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'webmock'
   gem 'simplecov', require: false
-  gem 'awesome_print'
-  gem 'annotate'
 end
 
 group :development do

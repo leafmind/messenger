@@ -80,7 +80,7 @@ describe Microservices::Rooms, api: true  do
   describe "POST /api/v1/rooms/" do
     let(:base_url) { "/api/v1/rooms/" }
 
-    it 'creates a new message' do
+    it 'creates a new room' do
       name = build(:room).name
       post base_url, {user_token: user.authentication_token, name: name}
 
@@ -89,7 +89,7 @@ describe Microservices::Rooms, api: true  do
       expect(json_response['name']).to eq(name)
     end
 
-    it 'returns 400 when creating a new message if it is invalid' do
+    it 'returns 400 when creating a new room if it is invalid' do
       post base_url, {user_token: user.authentication_token, name: ''}
 
       expect(response).to have_http_status(422)
