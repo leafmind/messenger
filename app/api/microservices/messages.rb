@@ -17,7 +17,6 @@ module Microservices
 
       desc 'Create a message' do
         success Entities::Message
-        failure [[422, 'Validation Error', 'Entities::Error']]
       end
       params do
         requires :body, type: String, desc: 'Message body'

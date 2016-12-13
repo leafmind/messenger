@@ -1,6 +1,5 @@
 module Microservices
   module Helpers
-    # @!scope class
   	DEBUG_USER_TOKEN = 'debug-user-token'
   	
     def authenticate_user_from_token!
