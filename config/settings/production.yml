@@ -4,3 +4,5 @@ heroku:
     allowed_request_origins: 
       url: 'https://ancient-shelf-98201.herokuapp.com'
       regex: "http://ancient-shelf-98201.herokuapp.com.*"
+swagger:
+  app_url: https://ancient-shelf-98201.herokuapp.com
