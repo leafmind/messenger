@@ -16,7 +16,12 @@ class API < Grape::API
   mount Microservices::Ping
   mount Microservices::Rooms
 
-  add_swagger_documentation
+  add_swagger_documentation info: {
+    title: "Message Broadcasting API",
+    description: "Grape-powered REST API.",
+    contact_email: "leafmind@gmail.com",
+    contact_url: "https://ancient-shelf-98201.herokuapp.com"
+  }
 
   route :any, '*path' do
     error!('404 Not Found', 404)
