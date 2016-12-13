@@ -18,9 +18,6 @@ cd messenger
 (optional: check out /doc folder which contains source-code-related docs)
 
 ### **Local Setup**  
-git clone git@github.com:leafmind/messenger.git  
-cd messenger  
-(rvm install ruby-2.3.3) if you haven't installed it already  
 bundle install  
 bundle exec rake db:create db:migrate db:seed  
 bundle exec rspec spec  
