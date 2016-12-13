@@ -40,7 +40,7 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   config.action_cable.url = Settings.heroku.action_cable.url
-  config.action_cable.allowed_request_origins = Settings.heroku.action_cable.allowed_request_origins
+  config.action_cable.allowed_request_origins = [Settings.heroku.action_cable.allowed_request_origins.url, Regex.new(Settings.heroku.action_cable.allowed_request_origins.regex)]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
