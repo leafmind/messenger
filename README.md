@@ -1,13 +1,15 @@
 # README
 
-Project requirements:
+Tiny Messenger
+======
 
-Ruby 2.3.3
-Redis
-PostgreSQL
-Modern browser :)
+### Project requirements:
 
-**Local setup:**  
+Ruby 2.3.3  
+Redis  
+PostgreSQL  
+
+### **Local setup:**  
 git clone git@github.com:leafmind/messenger.git  
 cd messenger  
 (rvm install ruby-2.3.3) if you haven't installed it already  
@@ -16,7 +18,7 @@ bundle exec rake db:create db:migrate db:seed
 
 bundle exec rspec spec  
 
-**Deploy on Heroku**  
+### **Deploy on Heroku**  
 heroku login  
 heroku git:remote -a ancient-shelf-98201 (paste your app name)  
 git push heroku master  
@@ -24,7 +26,7 @@ heroku run bundle exec rake db:migrate
 heroku run bundle exec rake db:seed  
 heroku addons:add redistogo  
 heroku config --app your_app_name | grep REDISTOGO_URL  
-(put this url to config/cable.yml production)  
+(put this url to config/cable.yml production section)  
 git push heroku master  
 
 deployed on heroku  
