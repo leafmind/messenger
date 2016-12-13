@@ -5,8 +5,10 @@
   <%= @room.name %>
 </p>
 
-<div id="messages" data-chat-room-id="<%= @room.id %>">
-  <%= render @room.messages %>
+<div class="row">
+<div id="messages" data-chat-room-id="<%= @room.id %>" class="col-md-12">
+  <%= render partial: 'rooms/message', collection: @room.messages %>
+</div>
 </div>
 
 <%= form_for @message, url: '#' do |f| %>

@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Room.create!(name: 'messages')
+User.create!(name: 'default_user', email: 'default@user.com', password: '123123', password_confirmation: '123123')

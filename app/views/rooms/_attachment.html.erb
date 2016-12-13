@@ -1,0 +1,11 @@
+<% if attachment.image_url %>
+  <a href="<%= attachment.image_url %>"><img src="<%= attachment.image_url %>" width=150 height=150 /></a>
+<% else %>
+  <p>
+    <a href="<%= attachment.title_url %>"><%= attachment.title || '...' %></a>
+    <br>
+    <span>
+      <%= attachment.description %>
+    </span>
+  </p>
+<% end %>

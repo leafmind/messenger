@@ -4,10 +4,14 @@
       <div class="col-md-1">
         <%= gravatar_for message.user %>
       </div>
-      <div class="col-md-11">
+      <div class="col-md-10">
         <p class="card-text">
           <span class="text-muted"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
           <%= message.body %>
+        </p>
+        <p class="card-text">
+          <span class="text-muted">attachments</span><br>
+          <%= render partial: 'rooms/attachment', collection: message.attachments %>
         </p>
       </div>
     </div>
