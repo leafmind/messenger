@@ -39,8 +39,8 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
-  config.action_cable.url = 'wss://ancient-shelf-98201.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://ancient-shelf-98201.herokuapp.com', /http:\/\/ancient-shelf-98201.herokuapp.com.*/ ]
+  config.action_cable.url = Settings.heroku.action_cable.url
+  config.action_cable.allowed_request_origins = Settings.heroku.action_cable.allowed_request_origins
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true

@@ -289,6 +289,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.2)
+  config
   database_cleaner
   devise (~> 4.2)
   devise_token_auth

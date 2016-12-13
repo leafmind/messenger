@@ -1,0 +1,4 @@
+heroku:
+  action_cable:
+    url: 'wss://ancient-shelf-98201.herokuapp.com/cable'
+    allowed_request_origins: [ 'https://ancient-shelf-98201.herokuapp.com', /http:\/\/ancient-shelf-98201.herokuapp.com.*/ ]

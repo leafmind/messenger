@@ -32,6 +32,7 @@ heroku run bundle exec rake db:seed
 heroku addons:add redistogo  
 heroku config --app your_app_name | grep REDISTOGO_URL  
 (put this url to config/cable.yml production section)  
+(Also you should change your app name in config/settings/production.yml)
 git push heroku master  
 
 deployed on heroku  

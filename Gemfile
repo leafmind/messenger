@@ -40,6 +40,7 @@ gem 'httparty'
 gem 'nokogiri'
 
 gem 'yard'
+gem 'config'
 
 
 # Use Capistrano for deployment
