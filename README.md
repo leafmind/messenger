@@ -3,19 +3,21 @@
 Tiny Messenger
 ======
 
+Message Broadcasting
+
 ### Project requirements:
 
 Ruby 2.3.3  
 Redis  
 PostgreSQL  
 
-### **Installation guide**
+### **Installation Guide**
 git clone git@github.com:leafmind/messenger.git  
 cd messenger  
 (rvm install ruby-2.3.3) if you haven't installed it already  
 (optional: check out /doc folder which contains source-code-related docs)
 
-### **Local setup:**  
+### **Local Setup**  
 git clone git@github.com:leafmind/messenger.git  
 cd messenger  
 (rvm install ruby-2.3.3) if you haven't installed it already  
@@ -24,7 +26,7 @@ bundle exec rake db:create db:migrate db:seed
 bundle exec rspec spec  
 bundle exec rails s  
 
-### **Deploy on Heroku**  
+### **Heroku Setup**  
 heroku login  
 heroku git:remote -a ancient-shelf-98201 (paste your app name)  
 git push heroku master  
@@ -39,7 +41,6 @@ deployed on heroku
 https://ancient-shelf-98201.herokuapp.com  
 
 ### **Usage Guide**
-
 1) Register  
 2) Choose a room  
 3) Type something  
