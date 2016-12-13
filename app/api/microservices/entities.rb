@@ -29,5 +29,9 @@ module Microservices
         expose :updated_at
       end
     end
+
+    class Error < Grape::Entity
+
+    end
   end
 end

@@ -58,6 +58,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'webmock'
   gem 'simplecov', require: false
   gem 'awesome_print'
   gem 'annotate'

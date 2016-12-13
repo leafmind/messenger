@@ -23,8 +23,8 @@ class MessageParser
         message.attachments.create!(image_url: url)
       else
       	doc = Nokogiri::HTML(response.body)
-      	contents = doc.at("meta[name='#{description}']")['content']
-        title = doc.at('title')['content']
+      	contents = doc.at("meta[name='description']").try(:[], 'content')
+        title = doc.at('title').try(:[], 'content')
         message.attachments.create!(title: title, title_url: url, description: contents)
       end      
     end

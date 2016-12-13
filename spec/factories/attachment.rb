@@ -5,7 +5,7 @@ FactoryGirl.define do
     description "some text"
 
     trait :with_image do
-      sequence(:image_url) { |n| "http://site_#{n}.com/image.png" }
+      image_url "http://site.com/image.png"
     end
   end
 

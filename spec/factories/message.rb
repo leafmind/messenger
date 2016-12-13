@@ -13,5 +13,13 @@ FactoryGirl.define do
         message.attachments << create(:attachment, :with_image, message: message)
       end
     end
+
+    trait :images_in_body do
+      body 'http://site.com/image.png kittens'
+    end
+
+    trait :urls_in_body do
+      body 'http://site.com/doc.pdf'
+    end
   end
 end

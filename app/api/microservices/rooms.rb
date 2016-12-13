@@ -25,7 +25,7 @@ module Microservices
         if room.persisted?
           present room, with: Entities::Room
         else
-          error!("Failed to save room #{room.errors.messages}", 400)
+          error!("Failed to save room #{room.errors.messages}", 422)
         end
       end
     end

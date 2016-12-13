@@ -8,10 +8,5 @@ class RoomsController < ApplicationController
     @room = Room.includes(:messages).find_by(id: params[:id])
     @message = Message.new
   end
-
-  private
-
-  def room_params
-    params.require(:room).permit(:name)
-  end
+  
 end
