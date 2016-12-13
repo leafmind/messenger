@@ -39,6 +39,8 @@ gem 'rails_config'
 gem 'httparty'
 gem 'nokogiri'
 
+gem 'yard'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -52,11 +54,13 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'rspec-its'
   gem 'rails-controller-testing'
+  gem 'rspec_api_documentation'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'simplecov', require: false
   gem 'awesome_print'
+  gem 'annotate'
 end
 
 group :development do

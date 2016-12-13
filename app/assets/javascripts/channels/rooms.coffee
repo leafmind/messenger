@@ -10,10 +10,10 @@ jQuery(document).on 'turbolinks:load', ->
         chat_room_id: messages.data('chat-room-id')
       },
       connected: ->
-        # TODO: notify
+        console.log("connected")
 
       disconnected: ->
-        # TODO: notify
+        console.log("disconnected")
 
       received: (data) ->
         messages.append data['message']

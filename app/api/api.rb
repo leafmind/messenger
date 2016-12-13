@@ -1,5 +1,6 @@
 require 'grape-swagger'
 
+# @version 0.0.1 
 class API < Grape::API
   prefix 'api'
   version 'v1', using: :path

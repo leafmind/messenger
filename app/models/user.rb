@@ -14,12 +14,14 @@ class User < ApplicationRecord
 
   before_save :ensure_authentication_token
 
+  # @!group Callbacks
   def ensure_authentication_token
     if authentication_token.blank?
       self.authentication_token = generate_authentication_token
     end
   end
-
+  # @!endgroup
+  
   private
   
   def generate_authentication_token
