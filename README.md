@@ -50,3 +50,8 @@ https://ancient-shelf-98201.herokuapp.com
 7) Be Happy  
 Goto 1 and connect several users to the 'messages' room to see live broadcasting from REST API(Swagger) in action
 You can use your own API token in Swagger instead of a debug token(You will find it on the rooms page after registration)
+
+### **LiveDoc(Swagger)**
+Swagger allows you to easily interact with your app's REST API, providing flexible documentation solution at the same time  
+
+https://ancient-shelf-98201.herokuapp.com/swagger  
