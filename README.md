@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project requires:
 
-Things you may want to cover:
+Ruby 2.3.3
+Redis
+PostgreSQL
+Modern browser
 
-* Ruby version
+bundle exec rake db:create db:migrate db:seed
 
-* System dependencies
+bundle exec rspec spec
 
-* Configuration
+deployed on heroku
+https://ancient-shelf-98201.herokuapp.com
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1) Register
+2) Choose a room
+3) Type something
+4) Check out the API LiveDoc: https://ancient-shelf-98201.herokuapp.com/swagger
+5) Add some messages via LiveDoc and check out the room again
+6) Add URIs to websites or images to your message
+7) Be Happy
