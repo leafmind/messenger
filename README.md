@@ -18,12 +18,12 @@ bundle exec rspec spec
 
 **Deploy on Heroku**  
 heroku login  
-heroku git:remote -a ancient-shelf-98201 (paster your app name)  
+heroku git:remote -a ancient-shelf-98201 (paste your app name)  
 git push heroku master  
 heroku run bundle exec rake db:migrate  
 heroku run bundle exec rake db:seed  
 heroku addons:add redistogo  
-heroku config --app ancient-shelf-98201 | grep REDISTOGO_URL  
+heroku config --app your_app_name | grep REDISTOGO_URL  
 (put this url to config/cable.yml production)  
 git push heroku master  
 
