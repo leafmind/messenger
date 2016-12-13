@@ -17,7 +17,7 @@ module Microservices
         success Entities::Room
       end
       params do
-        requires :name, type: String, desc: 'The name of the group'
+        requires :name, type: String, desc: 'The name of the room'
       end
       post do
         room = Room.create(name: params[:name])
