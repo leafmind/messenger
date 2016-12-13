@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20161212171439) do
     t.string   "title_url"
     t.text     "description"
     t.string   "image_url"
+    t.integer  "message_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["message_id"], name: "index_attachments_on_message_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
@@ -62,6 +64,7 @@ ActiveRecord::Schema.define(version: 20161212171439) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "attachments", "messages"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
 end

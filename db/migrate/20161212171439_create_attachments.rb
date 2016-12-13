@@ -5,6 +5,7 @@ class CreateAttachments < ActiveRecord::Migration[5.0]
       t.string :title_url
       t.text :description
       t.string :image_url
+      t.references :message, foreign_key: true
 
       t.timestamps
     end

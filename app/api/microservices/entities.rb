@@ -10,6 +10,7 @@ module Microservices
 
       expose :id
       expose :body, :sender_name
+      expose :attachments, using: Entities::Attachment
 
       with_options(format_with: :iso_timestamp) do
         expose :created_at

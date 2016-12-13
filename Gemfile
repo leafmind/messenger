@@ -36,6 +36,8 @@ gem 'grape-swagger-entity'
 gem 'grape-swagger-rails'
 
 gem 'rails_config'
+gem 'httparty'
+gem 'nokogiri'
 
 
 # Use Capistrano for deployment
