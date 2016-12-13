@@ -47,3 +47,5 @@ https://ancient-shelf-98201.herokuapp.com
 5) Add some messages via LiveDoc and check out the room again  
 6) Add URIs to websites or images to your message  
 7) Be Happy  
+Goto 1 and connect several users to the 'messages' room to see live broadcasting from REST API(Swagger) in action
+You can use your own API token in Swagger instead of a debug token(You will find it on the rooms page after registration)
