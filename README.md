@@ -24,6 +24,7 @@ cd messenger
 (optional: check out /doc folder which contains source-code-related docs)
 
 ### **Local Setup**  
+(check settings.yml and settings/development.yml and make changes accordingly)  
 bundle install  
 bundle exec rake db:create db:migrate db:seed  
 bundle exec rspec spec  
