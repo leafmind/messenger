@@ -13,14 +13,16 @@ module Microservices
         present Room.all, with: Entities::Room
       end
 
-      desc 'Create a room. Available only for users who can create rooms.' do
+      desc 'Create a room. Available only for users who can create rooms' do
         success Entities::Room
       end
       params do
-        requires :name, type: String, desc: 'The name of the room'
+        requires :room, type: Hash, desc: 'Room object with name' do
+          requires :name, type: String, desc: 'The name of the room'
+        end
       end
       post do
-        room = Room.create(name: params[:name])
+        room = Room.create(params[:room])
 
         if room.persisted?
           present room, with: Entities::Room

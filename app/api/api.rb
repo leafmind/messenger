@@ -12,6 +12,10 @@ class API < Grape::API
     error! e.message, e.status, e.headers     
   end
 
+  rescue_from Grape::Exceptions::ValidationErrors do |e|
+    error!(e, 400)
+  end
+
   mount Microservices::Messages
   mount Microservices::Ping
   mount Microservices::Rooms

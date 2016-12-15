@@ -61,7 +61,7 @@ describe Microservices::Rooms, api: true  do
 
     it 'creates a new message' do
       msg_body = build(:message).body
-      post base_url, {user_token: token_user.authentication_token, body: msg_body}
+      post base_url, {user_token: token_user.authentication_token, message: {body: msg_body}}
 
       expect(response).to have_http_status(201)
       json_response = JSON.parse(response.body)
@@ -70,7 +70,7 @@ describe Microservices::Rooms, api: true  do
     end
 
     it 'returns 400 when creating a new message if it is invalid' do
-      post base_url, {user_token: token_user.authentication_token, body: ''}
+      post base_url, {user_token: token_user.authentication_token, message: {body: ''}}
 
       expect(response).to have_http_status(422)
     end
@@ -82,7 +82,7 @@ describe Microservices::Rooms, api: true  do
 
     it 'creates a new room' do
       name = build(:room).name
-      post base_url, {user_token: user.authentication_token, name: name}
+      post base_url, {user_token: user.authentication_token, room: {name: name}}
 
       expect(response).to have_http_status(201)
       json_response = JSON.parse(response.body)
@@ -90,7 +90,7 @@ describe Microservices::Rooms, api: true  do
     end
 
     it 'returns 400 when creating a new room if it is invalid' do
-      post base_url, {user_token: user.authentication_token, name: ''}
+      post base_url, {user_token: user.authentication_token, room: {name: ''}}
 
       expect(response).to have_http_status(422)
     end

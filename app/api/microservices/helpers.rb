@@ -17,6 +17,14 @@ module Microservices
     def current_user
       @current_user
     end
+
+    module Messages
+      def build_message(params, user)
+        room = Room.find(params[:id])
+        message = params[:message]
+        MessageService.new(room, user, message).build_message
+      end
+    end
   end
 end
 

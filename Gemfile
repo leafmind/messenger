@@ -41,6 +41,7 @@ gem 'nokogiri'
 
 gem 'yard'
 gem 'config'
+gem 'hashie-forbidden_attributes'
 
 
 # Use Capistrano for deployment

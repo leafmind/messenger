@@ -31,7 +31,8 @@ module Microservices
     end
 
     class Error < Grape::Entity
-
+      expose :code
+      expose :message
     end
   end
 end

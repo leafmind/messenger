@@ -1,5 +1,6 @@
 module Microservices
   class Messages < Grape::API
+    helpers Microservices::Helpers::Messages
     before { authenticate_user_from_token! }
 
     desc 'Messages'
@@ -19,10 +20,13 @@ module Microservices
         success Entities::Message
       end
       params do
-        requires :body, type: String, desc: 'Message body'
+        requires :message, type: Hash, desc: 'Message object' do
+          requires :body, type: String, desc: 'Message body'
+        end
       end
       post ':id/messages' do
-        message = Room.find(params[:id]).messages.new(body: params[:body], user: current_user)
+        message = build_message(params, current_user)
+        
         if message.save
           present message, with: Entities::Message
         else
